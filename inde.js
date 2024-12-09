@@ -1,5 +1,5 @@
-const names = document.getElementById("name").value;
-document.getElementById("result").innerText = names;
+let names = document.getElementById("name").value;
+
 const age = document.getElementById("age").value;
 
 function getHour() {
@@ -23,7 +23,7 @@ function getHour() {
       newHour +
       " PM and You're Approaching to go back at home.";
   } else {
-    document.getElementById("result").innerText =
+    document.getElementById("result").textContent =
       "Good evening " +
       names +
       "," +
