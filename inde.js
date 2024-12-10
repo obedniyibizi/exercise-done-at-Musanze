@@ -1,35 +1,16 @@
-let names = document.getElementById("name").value;
-
-const age = document.getElementById("age").value;
-
-function getHour() {
-  const hour = new Date();
-  const newHour = hour.getHours();
-  //   console.log(newHour);
-  if (newHour < 12) {
-    document.getElementById("result").innerText =
-      "Good morning " +
-      names +
-      "," +
-      "We are on " +
-      newHour +
-      " AM and You're Approaching to the SunSet.";
-  } else if (newHour > 12 && newHour < 18) {
-    document.getElementById("result").innerText =
-      "Good afternoon " +
-      names +
-      "," +
-      "We are on " +
-      newHour +
-      " PM and You're Approaching to go back at home.";
-  } else {
-    document.getElementById("result").textContent =
-      "Good evening " +
-      names +
-      "," +
-      "We are on " +
-      newHour +
-      " PM and You're Approaching to the time of sleeping.";
-  }
+{/*Just Display name on page*/}
+let izina1=document.getElementById("izina").value
+const butto=document.getElementById("nibuto")
+const igisubizo=document.getElementById("igisubizo")
+const amasaha=new Date().getHours()
+butto.onclick=() =>{
+   let Amazina=izina1
+   if(amasaha<4 && amasaha>1){
+   igisubizo.innerHTML=` Mwaramutse Neza ${Amazina}, Ubungubu Uri mumasaha yigicuku`
+   console.log(`Amazina yawe ni ${Amazina}`)
+   }
+   else{
+      igisubizo.textContent=`Mwiriwe neza ${Amazina}? Ubungubu turi mumasaha yakazi`
+      console.log(`Amazina yawe ni ${Amazina}`)
+   }
 }
-getHour();
